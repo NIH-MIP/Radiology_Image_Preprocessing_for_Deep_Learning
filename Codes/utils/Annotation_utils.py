@@ -4,9 +4,7 @@
 # Date:   11.07.2019
 # -------------------------------------------------------------------------------
 from __future__ import print_function
-import pandas as pd
 import re
-import scipy.ndimage as ndimage
 from PIL import Image, ImageDraw
 from .utils import *
 
