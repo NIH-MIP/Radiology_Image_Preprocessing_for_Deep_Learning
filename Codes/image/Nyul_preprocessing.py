@@ -150,10 +150,10 @@ def train(image_list,dir1,dir2,pLow=1, pHigh=99, sMin=1, sMax=99, numPoints=10,
         allMappedLandmarks = []
 
         for F2, image in enumerate(image_list):
-                if True:#image!='7148914_20180608':
+                if True:
                         try:
-                            print('Learning the landmarks from: ', image + '.nii')
-                            img = sitk.ReadImage(join(dir1, image+'.nii'))
+                            print('Learning the landmarks from: ', image)
+                            img = sitk.ReadImage(join(dir1, image))
                         except Exception:
                             img=DicomRead(join(dir1, image))
                         landmarks = getLandmarks(img, showLandmarks=showLandmarks,nbins=nbins,pHigh=pHigh,pLow=pLow,numPoints=numPoints)
