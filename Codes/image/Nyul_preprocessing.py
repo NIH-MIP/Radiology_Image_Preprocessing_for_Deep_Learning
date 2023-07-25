@@ -220,7 +220,7 @@ def transform(image,meanLandmarks,mask=None):
     toc()
     mappedData = mappedData.reshape(data.shape)
 
-    output = sitk.GetImageFromArray(shif_by_negative_value(mappedData.astype(int)).astype('uint16'))
+    output = sitk.GetImageFromArray(shif_by_negative_value(mappedData.astype(int)).astype('float32'))
     output.SetSpacing(image.GetSpacing())
     output.SetOrigin(image.GetOrigin())
     output.SetDirection(image.GetDirection())
